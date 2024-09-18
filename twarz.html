@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="arkusz3.css">
+</head>
+<body>
+    <aside>
+        <div id="LeftTop" >
+<h2>Nasza oferta</h2>
+<ol>
+    <li><a href="twarz.html">Oczyszacznie twarzy</a>
+        <ul>
+            <li>Peeling</li>
+            <li>Maska</li>
+        </ul>
+    </li>
+    <li>Masaż</li>
+    <li>Makijaż</li>
+</ol>
+<a href="arkusz3.html" id="arkuszLink">Strona głowna</a>
+</div>
+<div id="leftBottom"></div>
+<img src="obraz1.jpg" alt="Personel">
+</div>
+    </aside>
+    <!-- <aside id="LeftBottom">
+     <img src="obraz1.jpg" alt="Personel">
+    </aside> -->
+    <header>
+    <h1>Usługi kosmetyczne</h1>
+    </header>
+    <main> 
+        <h3>Kalkulator ceny wizyty</h3>
+        <input type="checkbox" name="" id="Peelingcheckbox">Peeling<br>
+        <input type="checkbox" name="" id="maskacheckbox">Maska<br>
+        <input type="checkbox" name="" id="masazcheckbox">Masaż twarzy<br>
+        <input type="checkbox" name="" id="makijazcheckbox">Makijaż<br>
+        <button onclick="oblicz()">Oblicz cene</button><br>
+        <p id="cena"></p>
+    </main>
+    <footer>
+ <p>Autor: Jan Cieszynski</p>
+    </footer>
+    <script>
+        function oblicz() {
+    
+     let suma = 0;
+     if (document.getElementById("Peelingcheckbox").checked){
+        suma += 45;
+     }
+     if (document.getElementById("maskacheckbox").checked){
+        suma += 30;
+     }
+     if (document.getElementById("masazcheckbox").checked){
+        suma += 20;
+     }
+     if (document.getElementById("makijazcheckbox").checked){
+        suma += 50;
+     }
+     let tekstwyjsciowy = "Suma zabiegów: " + suma;
+     document.getElementById("cena").innerHTML = tekstwyjsciowy;
+
+    }
+</script>
+</body>
+</html>
